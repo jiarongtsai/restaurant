@@ -7,15 +7,18 @@
         <div class="input-group">
           <input type="text" name="keyword" class="form-control" 
             placeholder=
+            {{!-- 新增條件判斷式 增加搜尋欄位的使用者體驗 --}}
             {{#if keyword }}
                 "{{keyword}}"
             {{else}}
                 "輸入餐廳、分類" 
             {{/if}}
             aria-label="Restaurant Name..." value="" aria-describedby="search-button">
+          
           <div class="input-group-append">
             <button class="btn btn-major" type="submit" id="search-button"><i class="fas fa-search"></i></button>
           </div>
+       
         </div>
       </form>
     </div>
@@ -35,7 +38,10 @@
                 <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}">
                 <div class="card-body p-3">
                 <h6 class="card-title mb-1">{{this.name}}</h6>
-                <div class="restaurant-category mb-1"><i class="fas fa-utensils pr-2"></i>{{this.category}}
+                
+                <div class="restaurant-category mb-1">
+                  <i class="fas fa-utensils pr-2"></i>
+                  {{this.category}}
                 </div>
 
                 <span class="badge badge-pill badge-danger font-weight-normal">

@@ -15,10 +15,13 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/search', (req, res)=>{
+    //避免搜尋空白字串的情形
     const keyword = req.query.keyword.trim()
     const results = restaurantList.results.filter((restaurant)=>{
         return keywordSearch(restaurant.name, keyword) || keywordSearch(restaurant.category, keyword)
     })
+
+    // 新增獨立的查找函式，讓查找資料的程式碼簡化且能重複使用
     function keywordSearch(string, keyword){
         string = string.toLowerCase()
         keyword = keyword.toLowerCase()
@@ -37,5 +40,5 @@ app.get('/restaurants/:id', (req, res)=>{
 })
 
 app.listen(3000, ()=>{
-    console.log('The server is listenning on port 3000')
+    console.log('The server is listening on port 3000')
 })

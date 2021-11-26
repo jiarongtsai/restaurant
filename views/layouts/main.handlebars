@@ -5,19 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>打造餐廳清單</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
     
+    {{!-- local css file --}}
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
+
+    {{!-- font awesone --}}
+    <script src="https://kit.fontawesome.com/508d25e617.js" crossorigin="anonymous"></script>
+    
+    
 </head>
 <body>
     <header>
         <!-- navigation -->
         <nav class="navbar navbar-light bg-light">
             <div class="container">
-            <a class="navbar-brand" href="/">
-                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/6227/restaurant-list-logo.png" width="30" height="30" class="d-inline-block align-top" alt="好。吃">
-                我的餐廳清單
+                <a class="navbar-brand" href="/">
+                    <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/6227/restaurant-list-logo.png" width="30" height="30" class="d-inline-block align-top" alt="好。吃">
+                    我的餐廳清單
                 </a>
             </div>
         </nav>
@@ -26,5 +33,10 @@
     </header>
 
     {{{body}}}
+
+    <footer class="py-3 my-4">
+        <div class="border-bottom pb-3 mb-3"></div>
+        <p class="text-center text-muted">© 2021 我的餐廳清單</p>
+    </footer>
 </body>
 </html>
